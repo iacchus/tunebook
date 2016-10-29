@@ -34,6 +34,10 @@ a:hover {
     transition: padding-left .2s ease;
 }
 
+svg {
+    margin: 0 auto;
+}
+
 svg * {
     font-family: 'Slabo 27px';
 }
