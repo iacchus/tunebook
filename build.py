@@ -78,11 +78,12 @@ file_contents = """
       <h1>Mercurii Tunebook</h1>
 
       <div id="presentation">
-        From the repository <a href="https://github.com/iacchus/tunebook/">https://github.com/iacchus/jupyter-venv/</a><br/><br/>
+        From the repository <a href="https://github.com/iacchus/tunebook/">https://github.com/iacchus/tunebook/</a><br/>
+        Visit my weblog <a href="https://iacchus.github.io">“A Dança dos Espíritos”</a><br/><br/>
       </div>
 
       <div id="files">
-        <div id="files-title">Browse files..</div>
+        <!--<div id="files-title">Browse files..</div>-->
 {0}
       </div> 
     </div>
