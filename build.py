@@ -34,7 +34,7 @@ print("Converting .LY files to PNG..")
 ly_files = glob.glob('*.ly', recursive=False)
 for ly_file in ly_files:
     clear_ly(ly_file)
-    os.system("lilypond -fpng -dresolution=200 {0}".format(ly_file))
+    os.system("lilypond -fpng -dresolution=160 {0}".format(ly_file))
 
 
 print("Trimming PNG white space..")
