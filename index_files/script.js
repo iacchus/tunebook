@@ -1,9 +1,9 @@
 
 	$(document).ready(function(){
 
-		if($("code.language-abc").length)
+		if($("div.tune-container pre").length)
 		{
-			var tunes_code = $("code.language-abc");
+			var tunes_code = $("div.tune-container > pre");
 				
 			for(var $i=0; tunes_code[$i]; $i++)
 			{               
