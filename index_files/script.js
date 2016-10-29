@@ -21,7 +21,8 @@
 					$(tunes_code[$i]).text(), //abctune
 					{}, //parserParams
 					{ staffwidth: 940,
-				          scale: 1.25	}, //engraverParams
+				          scale: 1.25,
+					paddingleft: 0,	paddingright: 0 }, //engraverParams
 					{ viewportHorizontal: true } //renderParams
 					);
 				$(tunes_code[$i]).hide();
