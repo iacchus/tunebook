@@ -50,6 +50,8 @@ os.system("rm *.ly *.midi *.ps *.pdf")
 tune_files = str()
 index_filename = "index.html"
 
+png_files.sort()
+
 print("Writing index file listing..")
 for file in png_files:
     #index_files += "<a href='{0}' data-featherlight='iframe'>{0}</a><br/>\n".format(file)
