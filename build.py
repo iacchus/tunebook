@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import glob
 # use os.system("") to do it lil boy
