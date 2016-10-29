@@ -86,7 +86,7 @@ file_contents = """
     </div>
   </body>
 </html>
-""".format(png_files)
+""".format(tune_files)
 
 #print(file_contents)
 
