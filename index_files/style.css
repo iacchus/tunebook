@@ -9,6 +9,10 @@ body{
     font-size: 18px;
 }
 
+img {
+	width: 100%;
+}
+
 h1
 {
     font-family: 'Fredericka the Great', serif;
@@ -30,8 +34,13 @@ a:hover {
 }
 
 #page-container {
-    width: 800px;
+    width: 90%;
     margin: 0 auto;
+}
+
+.tune-container {
+	margin: 10px;
+	padding: 10px;
 }
 
 #files {
