@@ -23,7 +23,7 @@
 					{ staffwidth: 970 }, //engraverParams
 					{ viewportHorizontal: true } //renderParams
 					);
-				//$(tunes_code[$i]).hide();
+				$(tunes_code[$i]).hide();
 			}
 		}
 
