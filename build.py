@@ -86,9 +86,9 @@ os.system("rm *.ly *.midi *.ps *.pdf")
 
 tune_files = str()
 abc_code_files = str()
-index_filename = "index.html"
+index_filename = "index-rendered.html"
 
-index_abcjs_filename = "index_abcjs.html"
+index_abcjs_filename = "index.html"
 
 png_files.sort()
 
