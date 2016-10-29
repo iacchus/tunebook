@@ -75,10 +75,10 @@ file_contents = """
   </head>
   <body>
     <div id="page-container">
-      <h1>Index of Jupyter Notebooks exported to html</h1>
+      <h1>Mercurii Tunebook</h1>
 
       <div id="presentation">
-        From the repository <a href="https://github.com/iacchus/jupyter-venv/">https://github.com/iacchus/jupyter-venv/</a><br/><br/>
+        From the repository <a href="https://github.com/iacchus/tunebook/">https://github.com/iacchus/jupyter-venv/</a><br/><br/>
       </div>
 
       <div id="files">
