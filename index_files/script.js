@@ -20,7 +20,7 @@
 					"abctune-"+$i, //container
 					$(tunes_code[$i]).text(), //abctune
 					{}, //parserParams
-					{ staffwidth: 970 }, //engraverParams
+					{ staffwidth: 940 }, //engraverParams
 					{ viewportHorizontal: true } //renderParams
 					);
 				$(tunes_code[$i]).hide();
