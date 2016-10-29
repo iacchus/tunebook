@@ -16,6 +16,42 @@ def clear_ly(filename):
     with open(filename, 'w') as FREAK:
         FREAK.write(''.join(lines))
 
+def return_html(what=""):
+    return """
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>My Tunebook</title>
+
+        <link href="index_files/featherlight.min.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="index_files/style.css">
+
+        <!--<script src="script.js"></script>
+        <script src="index_files/jquery-latest.js"></script>
+        <script src="index_files/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
+
+      </head>
+      <body>
+        <div id="page-container">
+          <h1>Mercurii Tunebook</h1>
+
+          <div id="presentation">
+            From the repository <a href="https://github.com/iacchus/tunebook/">https://github.com/iacchus/tunebook/</a><br/>
+            Visit my weblog <a href="https://iacchus.github.io">“A Dança dos Espíritos”</a><br/><br/>
+          </div>
+
+          <div id="files">
+            <!--<div id="files-title">Browse files..</div>-->
+    {0}
+          </div> 
+        </div>
+      </body>
+    </html>
+""".format(what)
 #cleanly('cooleys.ly')
 
 print("Listing existing PNG files..")
@@ -48,7 +84,10 @@ print("Removing extra resource files..")
 os.system("rm *.ly *.midi *.ps *.pdf")
 
 tune_files = str()
+abc_code_files = str()
 index_filename = "index.html"
+
+index_abcjs_filename = "index_abcjs.html"
 
 png_files.sort()
 
@@ -57,48 +96,25 @@ for file in png_files:
     #index_files += "<a href='{0}' data-featherlight='iframe'>{0}</a><br/>\n".format(file)
     tune_files += "<div class='tune-container'><img src='{0}' /></div>\n".format(file)
 
-file_contents = """
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+abc_files = glob.glob('abc/*.abc', recursive=False)
+for abc_file in abc_files:
+    #index_files += "<a href='{0}' data-featherlight='iframe'>{0}</a><br/>\n".format(file)
+    with open(abc_file, 'r') as MYFILE:
+        abc = "".join(list(MYFILE))
+    abc_code_files += "<div class='tune-container'><pre>{0}</pre></div>\n".format(abc)
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <title>My Tunebook</title>
-
-    <link href="index_files/featherlight.min.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="index_files/style.css">
-
-    <!--<script src="script.js"></script>
-    <script src="index_files/jquery-latest.js"></script>
-    <script src="index_files/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
-
-  </head>
-  <body>
-    <div id="page-container">
-      <h1>Mercurii Tunebook</h1>
-
-      <div id="presentation">
-        From the repository <a href="https://github.com/iacchus/tunebook/">https://github.com/iacchus/tunebook/</a><br/>
-        Visit my weblog <a href="https://iacchus.github.io">“A Dança dos Espíritos”</a><br/><br/>
-      </div>
-
-      <div id="files">
-        <!--<div id="files-title">Browse files..</div>-->
-{0}
-      </div> 
-    </div>
-  </body>
-</html>
-""".format(tune_files)
 
 #print(file_contents)
 
 print("Writing index file '{}'..".format(index_filename))
 
 with open(index_filename,'w') as fd:
-    fd.write(file_contents)
+    fd.write(return_html(tune_files))
+    fd.close()
+
+print("Writing index file '{}'..".format(index_abcjs_filename))
+with open(index_abcjs_filename,'w') as fd:
+    fd.write(return_html(abc_code_files))
     fd.close()
 
 git_commands = "git add .; git commit -a -m 'autocommit from build.py!'; git push"
