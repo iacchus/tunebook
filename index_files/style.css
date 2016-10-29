@@ -15,6 +15,7 @@ img {
 
 h1
 {
+    text-align: center;
     font-family: 'Fredericka the Great', serif;
     font-weight: normal;
 }
@@ -34,50 +35,17 @@ a:hover {
 }
 
 #page-container {
-    width: 90%;
+    width: 1000px;
     margin: 0 auto;
+}
+
+#presentation {
+    text-align: center;
 }
 
 .tune-container {
 	margin: 10px;
 	padding: 10px;
-}
-
-#files {
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 3px;
-}
-
-#files-title {
-    padding: 4px 7px;
-    background-color: #669;
-    color: #fff;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    text-align: center;
-    text-shadow: 1px 1px #333;
-
-}
-
-#files > a:nth-child(4n) {
-    background-color: #eee;
-}
-
-#files > a:before {
-    content: '\2192    ';
-}
-
-#files > a {
-    padding: 4px 5px;
-    display: inline-block;
-    width: 100%
-}
-
-#files > a:hover {
-    color: #669;
-    padding-left: 10px;
-    transition: padding-left .2s ease;
 }
 
 .featherlight-content {
