@@ -32,7 +32,7 @@ def return_html(what=""):
 
         <script src="index_files/abcjs_basic_2.3-min.js"></script>
 
-        <script src="script.js"></script>
+        <script src="index_files/script.js"></script>
         <script src="index_files/jquery-latest.js"></script>
 
       </head>
