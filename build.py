@@ -102,7 +102,7 @@ for abc_file in abc_files:
     #index_files += "<a href='{0}' data-featherlight='iframe'>{0}</a><br/>\n".format(file)
     with open(abc_file, 'r') as MYFILE:
         abc = "".join(list(MYFILE))
-    abc_code_files += "<div class='tune-container'><pre>{0}</pre></div>\n".format(abc)
+    abc_code_files += "<div class='tune-container'><pre class='abctune'>{0}</pre></div>\n".format(abc)
 
 
 #print(file_contents)
