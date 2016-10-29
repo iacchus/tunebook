@@ -30,10 +30,10 @@ def return_html(what=""):
         <link href="index_files/featherlight.min.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="index_files/style.css">
 
+        <script src="index_files/jquery-latest.js"></script>
         <script src="index_files/abcjs_basic_2.3-min.js"></script>
 
         <script src="index_files/script.js"></script>
-        <script src="index_files/jquery-latest.js"></script>
 
       </head>
       <body>
