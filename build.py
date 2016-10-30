@@ -15,7 +15,6 @@ def return_html(what=""):
 
         <title>My Tunebook</title>
 
-        <link href="index_files/featherlight.min.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="index_files/style.css">
 
         <script src="index_files/jquery-latest.js"></script>
@@ -29,12 +28,10 @@ def return_html(what=""):
           <h1>Mercurii Tunebook</h1>
 
           <div id="presentation">
-            From the repository <a href="https://github.com/iacchus/tunebook/">https://github.com/iacchus/tunebook/</a><br/>
-            Visit my weblog <a href="https://iacchus.github.io">“A Dança dos Espíritos”</a><br/><br/>
+            <a href="https://github.com/iacchus/tunebook/">GitHub</a> – <a href="https://iacchus.github.io">Website</a><br/><br/>
           </div>
 
           <div id="files">
-            <!--<div id="files-title">Browse files..</div>-->
     {0}
           </div> 
         </div>
