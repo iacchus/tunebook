@@ -64,40 +64,42 @@ print("Listing ABC files..")
 abc_files = glob.glob('abc/*.abc', recursive=False)
 #abc_files.sort()
 
-print("Converting ABC files with abc2ly..")
-for abc_file in abc_files:
-    if abc_file.split('/')[1] not in existing_files:
-        os.system("abc2ly {0}".format(abc_file))
+#print("Converting ABC files with abc2ly..")
+#for abc_file in abc_files:
+#    if abc_file.split('/')[1] not in existing_files:
+#        os.system("abc2ly {0}".format(abc_file))
+#
+#print("Converting .LY files to PNG..")
+#ly_files = glob.glob('*.ly', recursive=False)
+#for ly_file in ly_files:
+#    clear_ly(ly_file)
+#    os.system("lilypond -fpng -dresolution=180 {0}".format(ly_file))
 
-print("Converting .LY files to PNG..")
-ly_files = glob.glob('*.ly', recursive=False)
-for ly_file in ly_files:
-    clear_ly(ly_file)
-    os.system("lilypond -fpng -dresolution=180 {0}".format(ly_file))
 
-
-print("Trimming PNG white space..")
-png_files = glob.glob('*.png', recursive=False)
-for png_file in png_files:
-    os.system("convert {0} -trim {0}".format(png_file))
+#print("Trimming PNG white space..")
+#png_files = glob.glob('*.png', recursive=False)
+#for png_file in png_files:
+#    os.system("convert {0} -trim {0}".format(png_file))
 
 print("Removing extra resource files..")
 os.system("rm *.ly *.midi *.ps *.pdf")
 
 tune_files = str()
 abc_code_files = str()
-index_filename = "index-rendered.html"
+#index_filename = "index-rendered.html"
 
 index_abcjs_filename = "index.html"
 
-png_files.sort()
+#png_files.sort()
 
-print("Writing index file listing..")
-for file in png_files:
+#print("Writing index file listing..")
+#for file in png_files:
     #index_files += "<a href='{0}' data-featherlight='iframe'>{0}</a><br/>\n".format(file)
-    tune_files += "<div class='tune-container'><img src='{0}' /></div>\n".format(file)
+#    tune_files += "<div class='tune-container'><img src='{0}' /></div>\n".format(file)
 
 abc_files = glob.glob('abc/*.abc', recursive=False)
+abc_files.sort()
+
 for abc_file in abc_files:
     #index_files += "<a href='{0}' data-featherlight='iframe'>{0}</a><br/>\n".format(file)
     with open(abc_file, 'r') as MYFILE:
@@ -107,11 +109,11 @@ for abc_file in abc_files:
 
 #print(file_contents)
 
-print("Writing index file '{}'..".format(index_filename))
+#print("Writing index file '{}'..".format(index_filename))
 
-with open(index_filename,'w') as fd:
-    fd.write(return_html(tune_files))
-    fd.close()
+#with open(index_filename,'w') as fd:
+#    fd.write(return_html(tune_files))
+#    fd.close()
 
 print("Writing index file '{}'..".format(index_abcjs_filename))
 with open(index_abcjs_filename,'w') as fd:
