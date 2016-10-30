@@ -4,18 +4,6 @@ import os
 import glob
 # use os.system("") to do it lil boy
 
-def clear_ly(filename):
-    #filename = "cooleys.ly"
-    with open(filename, 'r') as MYFILE:
-        lines = list(MYFILE)
-
-    for idx,line in enumerate(lines):
-            if "tagline" in line:
-                    lines[idx] = "\ttagline = \"\"\n"
-
-    with open(filename, 'w') as FREAK:
-        FREAK.write(''.join(lines))
-
 def return_html(what=""):
     return """
     <!DOCTYPE html>
@@ -53,36 +41,9 @@ def return_html(what=""):
       </body>
     </html>
 """.format(what)
-#cleanly('cooleys.ly')
-
-#print("Listing existing PNG files..")
-#existing_files = glob.glob('*.png', recursive=False)
-#for idx,existing_file in enumerate(existing_files):
-#    existing_files[idx] = "{}.abc".format(existing_file.split('.')[0])
 
 print("Listing ABC files..")
 abc_files = glob.glob('abc/*.abc', recursive=False)
-#abc_files.sort()
-
-#print("Converting ABC files with abc2ly..")
-#for abc_file in abc_files:
-#    if abc_file.split('/')[1] not in existing_files:
-#        os.system("abc2ly {0}".format(abc_file))
-#
-#print("Converting .LY files to PNG..")
-#ly_files = glob.glob('*.ly', recursive=False)
-#for ly_file in ly_files:
-#    clear_ly(ly_file)
-#    os.system("lilypond -fpng -dresolution=180 {0}".format(ly_file))
-
-
-#print("Trimming PNG white space..")
-#png_files = glob.glob('*.png', recursive=False)
-#for png_file in png_files:
-#    os.system("convert {0} -trim {0}".format(png_file))
-
-#print("Removing extra resource files..")
-#os.system("rm *.ly *.midi *.ps *.pdf")
 
 tune_files = str()
 abc_code_files = str()
@@ -104,16 +65,8 @@ for abc_file in abc_files:
     #index_files += "<a href='{0}' data-featherlight='iframe'>{0}</a><br/>\n".format(file)
     with open(abc_file, 'r') as MYFILE:
         abc = "".join(list(MYFILE))
-    abc_code_files += "<div class='tune-container' id='{0}'><pre class='abctune'>{1}</pre></div>\n".format(abc_file.split('.')[0], abc)
+    abc_code_files += "<div class='tune-container' id='{0}'><pre class='abctune'>{1}</pre></div>\n".format(abc_file.split('/')[1].split('.')[0], abc)
 
-
-#print(file_contents)
-
-#print("Writing index file '{}'..".format(index_filename))
-
-#with open(index_filename,'w') as fd:
-#    fd.write(return_html(tune_files))
-#    fd.close()
 
 print("Writing index file '{}'..".format(index_abcjs_filename))
 with open(index_abcjs_filename,'w') as fd:
