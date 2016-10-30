@@ -57,16 +57,16 @@ if argc > 2 and argv[1] == 's':
 
 if argc >= 2 and argv[1] != 's':
 
-    print("Searching for tune with id {0}..".format(argv[1]))
+    #    print("Searching for tune with id {0}..".format(argv[1]))
     results = get_tune(argv[1])
-    print('Current id has {} versions..'.format(results['count']))
+    #print('Current id has {} versions..'.format(results['count']))
 
     if argc == 2:
-        print("Showing first..\n")
+        #print("Showing first..\n")
         print(results['tunes'][0])
 
     elif argc == 3:
-        print("Showing no. {}..\n".format(argv[2]))
+        #print("Showing no. {}..\n".format(argv[2]))
         print(results['tunes'][int(argv[2])-1])
 
 
