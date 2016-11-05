@@ -62,7 +62,7 @@ for abc_file in abc_files:
     #index_files += "<a href='{0}' data-featherlight='iframe'>{0}</a><br/>\n".format(file)
     with open(abc_file, 'r') as MYFILE:
         abc = "".join(list(MYFILE))
-    abc_code_files += "<div class='tune-container' id='{0}'><pre class='abctune'>{1}</pre></div>\n".format(abc_file.split('/')[1].split('.')[0], abc)
+    abc_code_files += "<div class='tune-container' id='{0}'><pre class='abctune'>{1}\n%%staffsep 0\n</pre></div>\n".format(abc_file.split('/')[1].split('.')[0], abc)
 
 
 print("Writing index file '{}'..".format(index_abcjs_filename))
