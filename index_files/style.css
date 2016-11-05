@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Fredericka+the+Great|Slabo+27px');
 
 * {
     box-sizing: border-box;
+}
+html, body {
+    margin: 0px;
 }
 
 body{
@@ -16,8 +19,8 @@ img {
 h1
 {
     text-align: center;
-    font-family: 'Fredericka the Great', serif;
-    font-weight: normal;
+    font-family: 'Oswald', serif;
+    font-size: 26px;
 }
 
 a {
@@ -36,6 +39,13 @@ svg {
 
 svg * {
     font-family: 'Slabo 27px';
+}
+
+#github-fork {
+    width: 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 #page-container {
