@@ -21,3 +21,5 @@ The index.html is generating by:
 ## Also!!
 
 For more tunes visit https://thesession.org
+
+This tunebook uses [abcjs](https://github.com/paulrosen/abcjs) for rendering tunes..
