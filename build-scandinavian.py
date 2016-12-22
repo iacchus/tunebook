@@ -14,7 +14,7 @@ def return_html(what=""):
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <title>My Tunebook</title>
+        <title>Scandinavian Tunebook</title>
 
         <link rel="stylesheet" href="index_files/style.css">
 
@@ -25,9 +25,9 @@ def return_html(what=""):
 
       </head>
       <body>
-      <a href="https://github.com/iacchus/tunebook/"><img id="github-fork" src="index_files/github-corner-right.svg" /></a>
+      <a href="https://github.com/iacchus/scandinavian-tunebook/"><img id="github-fork" src="index_files/github-corner-right.svg" /></a>
         <div id="page-container">
-          <h1>Mercurii Tunebook</h1>
+          <h1>Scandinavian Tunebook</h1>
 
           <div id="presentation">
           </div>
