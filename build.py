@@ -27,7 +27,7 @@ def return_html(what=""):
       <body>
       <a href="https://github.com/iacchus/tunebook/"><img id="github-fork" src="index_files/github-corner-right.svg" /></a>
         <div id="page-container">
-          <h1>Mercurii Tunebook</h1>
+          <h1>Mercurii Irish Tunebook</h1>
 
           <div id="presentation">
           </div>
