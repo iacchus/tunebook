@@ -14,7 +14,7 @@ def return_html(what=""):
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <title>Irish Tunebook</title>
+        <title>Irish/Celtic Tunebook</title>
 
         <link rel="stylesheet" href="index_files/style.css">
 
@@ -27,7 +27,7 @@ def return_html(what=""):
       <body>
       <a href="https://github.com/iacchus/tunebook/"><img id="github-fork" src="index_files/github-corner-right.svg" /></a>
         <div id="page-container">
-          <h1>Mercurii Irish Tunebook</h1>
+          <h1>Mercurii Irish/Celtic Tunebook</h1>
 
           <div id="presentation">
           </div>
