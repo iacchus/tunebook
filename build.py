@@ -14,7 +14,7 @@ def return_html(what=""):
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <title>My Tunebook</title>
+        <title>Irish Tunebook</title>
 
         <link rel="stylesheet" href="index_files/style.css">
 
