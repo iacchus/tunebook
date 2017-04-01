@@ -84,3 +84,11 @@ svg * {
     color: #999;
     padding: 0 1px 0 1px;
 }
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

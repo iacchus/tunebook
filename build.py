@@ -25,7 +25,7 @@ def return_html(what=""):
 
       </head>
       <body>
-      <a href="https://github.com/iacchus/tunebook/"><img id="github-fork" src="index_files/github-corner-right.svg" /></a>
+      <a href="https://github.com/iacchus/tunebook/" class="no-print"><img id="github-fork" src="index_files/github-corner-right.svg" /></a>
         <div id="page-container">
           <h1>Mercurii Irish/Celtic Tunebook</h1>
 
@@ -99,7 +99,7 @@ for abc_file in abc_files:
     with open(abc_file, 'r') as MYFILE:
         abc = "".join(list(MYFILE))
 
-    abc_code_files += "<div class='tune-container' id='{0}'><pre class='abctune'>%%staffsep 27pt\n{1}</pre></div><div class='tunedata'>{2}</div>\n".format(abc_file.split('/')[1].split('.')[0], abc.strip('\n'), data_string)
+    abc_code_files += "<div class='tune-container' id='{0}'><pre class='abctune'>%%staffsep 27pt\n{1}</pre></div><div class='tunedata no-print'>{2}</div>\n".format(abc_file.split('/')[1].split('.')[0], abc.strip('\n'), data_string)
 
 print("Writing index file '{}'..".format(index_abcjs_filename))
 with open(index_abcjs_filename,'w') as fd:
